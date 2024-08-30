@@ -10,7 +10,7 @@ public class AppProperties
 {
 	
 	
-	public String getProperty(String filePath, String propertyName)
+	public static String getProperty(String filePath, String propertyName)
 	{
 		String property=null;
 		
@@ -24,21 +24,21 @@ public class AppProperties
 			
 			property= properties.getProperty(propertyName);
 			
-			Logs.getLog().getLogger().info("Successful to get property by name :" +propertyName);;
+			Logs.getLog().getLogger("AppProperties").info("Successful to get property by name :" +propertyName);;
 			
 		}catch(IOException ex)
 		{
-			Logs.getLog().getLogger().error("Failed to get property by name :" +ex.getMessage());
+			Logs.getLog().getLogger("AppProperties").error("Failed to get property by name :" +ex.getMessage());
 			
 		}
 		
 		if(property != null)
 		{
-			Logs.getLog().getLogger().info("success reading property :" +property);
+			Logs.getLog().getLogger("AppProperties").info("success reading property :" +property);
 		}
 		else
 		{
-			Logs.getLog().getLogger().error("Failed to get property by name :" +property);
+			Logs.getLog().getLogger("AppProperties").error("Failed to get property by name :" +property);
 		}
 		return property;
 		
