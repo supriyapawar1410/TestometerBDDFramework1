@@ -18,7 +18,9 @@ public class WebDriverFactory {
         WebDriver driver = null;
         
         AppProperties  appProperties= new AppProperties();
-        String browserName= appProperties.getProperty("src/test/resources/test.properties","browser");
+        //String browserName= appProperties.getProperty("src/test/resources/test.properties","browser");
+        
+        String browserName= System.getProperty("browser");
         
         try {
         	
