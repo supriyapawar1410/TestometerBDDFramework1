@@ -15,8 +15,13 @@ public class WebDriverActions {
 	private WebDriver driver= DriverFactory.getInstance().getWebDriver();
 	private JavascriptExecutor js= (JavascriptExecutor) driver;
 	
-	long timeOut= Long.parseLong(AppProperties.getProperty("src/test/resources/test.properties", "timeOut"));
-	long timeOutInMilis= Long.parseLong(AppProperties.getProperty("src/test/resources/test.properties", "timeOutInMilis"));
+	//long timeOut= Long.parseLong(AppProperties.getProperty("src/test/resources/test.properties", "timeOut"));
+	
+	long timeOut= Long.parseLong(System.getProperty("timeOut"));
+	
+	 //long timeOutInMilis= Long.parseLong(AppProperties.getProperty("src/test/resources/test.properties", "timeOutInMilis"));
+	
+	long timeOutInMilis=  Long.parseLong(System.getProperty("timeOutInMilis"));
 	
 	private WebDriverWait wait= new WebDriverWait(driver,Duration.ofSeconds(timeOut)); 
 	
