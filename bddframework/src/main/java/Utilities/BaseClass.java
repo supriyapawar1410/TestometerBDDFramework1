@@ -23,7 +23,7 @@ public class BaseClass {
       {
     	  DriverFactory.getInstance().setWebDriver(webdriverfactory.getWebDriverSession());
     	  DriverFactory.getInstance().getWebDriver().manage().window().maximize();
-    	  //DriverFactory.getInstance().getWebDriver().get(appproperties.getProperty("src/test/resources/test.properties","siteUrl"));
+    	 // DriverFactory.getInstance().getWebDriver().get(appproperties.getProperty("src/test/resources/test.properties","siteUrl"));
     	  
     	  DriverFactory.getInstance().getWebDriver().get(System.getProperty("siteUrl"));
     	  

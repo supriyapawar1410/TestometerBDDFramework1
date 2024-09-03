@@ -20,7 +20,7 @@ public class WebDriverFactory {
         AppProperties  appProperties= new AppProperties();
         //String browserName= appProperties.getProperty("src/test/resources/test.properties","browser");
         
-        String browserName= System.getProperty("browser");
+       String browserName= System.getProperty("browser");
         
         try {
         	
