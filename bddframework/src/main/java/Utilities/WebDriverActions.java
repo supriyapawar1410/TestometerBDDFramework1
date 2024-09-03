@@ -39,10 +39,9 @@ public class WebDriverActions {
 	
 	public WebElement WaitUntilVisibilityOfElementLocated(By locator)
 	{
-		WebElement element= wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+		WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 		executionOrder(element);
-		return element;
-	}
+		return element;	}
 	
     public void ScrollToElement(WebElement element) 
     {
